@@ -19,7 +19,7 @@
     .button { display:inline-block; background:#ffa500; color:white; padding:.7em 1.5em; text-decoration:none; border-radius:5px; margin-top:1em; font-weight:bold; }
     .commentbox { max-width: 800px; margin: 2em auto; padding: 1.5em; background: #fff8dd; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
     .product { background:#fff8dd; border-radius:10px; padding:1em; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-bottom:1.5em; overflow:auto; }
-    .product img { max-width:200px; float:right; margin-left:1em; border-radius:5px; object-fit:cover; }
+    .product img { max-width:200px; float:right; border-radius:5px; object-fit:cover; } /*margin-left:1em;*/
     .price { font-size:1.1em; font-weight:bold; color:#b37c00; margin-top:.5em; }
     .button { display:inline-block; background:#ffa500; color:white; padding:.5em 1em; text-decoration:none; border-radius:5px; margin-top:1em; font-weight:bold; }
     .container { max-width:800px; margin:2em auto; padding:1em; background:#fff8dd; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
