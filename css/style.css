@@ -6,8 +6,14 @@
     .hero h2 { margin: 0; text-align: center; }
     section { max-width:800px; margin:2em auto; padding:0 1em; }
     .product { background:#fff8dd; border-radius:10px; padding:1em; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    .gallery { display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em; }
-    .gallery img { width:250px; border-radius:10px; object-fit:cover; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+    /*
+.gallery { display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em; }    
+.gallery img { width:250px; border-radius:10px; object-fit:cover; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+    */
+    .gallery { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
+    .gallery img { width: calc(50% - 0.5em); /* 2 на ряд по умолчанию */ }
+    @media (max-width: 600px) { .gallery img { width: 100%; /* 1 на ряд на телефоне */ } }
+
     .price { font-size:1.2em; font-weight:bold; color:#b37c00; }
     .button { display:inline-block; background:#ffa500; color:white; padding:.7em 1.5em; text-decoration:none; border-radius:5px; margin-top:1em; font-weight:bold; }
     footer { text-align:center; padding:1em; background:#eee3a3; font-size:.9em; }
