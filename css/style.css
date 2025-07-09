@@ -10,9 +10,21 @@
 .gallery { display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em; }    
 .gallery img { width:250px; border-radius:10px; object-fit:cover; box-shadow:0 0 5px rgba(0,0,0,0.1); }
     */
-    .gallery { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
-    .gallery img { width: calc(50% - 0.5em); /* 2 на ряд по умолчанию */ }
-    @media (max-width: 600px) { .gallery img { width: 100%; /* 1 на ряд на телефоне */ } }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
 
     .price { font-size:1.2em; font-weight:bold; color:#b37c00; }
     .button { display:inline-block; background:#ffa500; color:white; padding:.7em 1.5em; text-decoration:none; border-radius:5px; margin-top:1em; font-weight:bold; }
