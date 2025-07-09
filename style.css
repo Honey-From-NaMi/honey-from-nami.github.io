@@ -1,0 +1,17 @@
+  <style>
+    body { margin:0; font-family:'Segoe UI',sans-serif; background:#fffdf4; color:#333; }
+    header { background:#f4c430; padding:1em; text-align:center; }
+    header h1 { margin:0; } 
+    .hero { display: flex; align-items: center; justify-content: center; gap: 1.5em; padding: 2em; background-color: #fff8dd; flex-wrap: wrap; }
+    .hero img { max-width: 100px; width: 100%; height: auto; border-radius: 0; box-shadow: none; }
+    .hero h2 { margin: 0; text-align: center; }
+    section { max-width:800px; margin:2em auto; padding:0 1em; }
+    .product { background:#fff8dd; border-radius:10px; padding:1em; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    .gallery { display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em; }
+    .gallery img { width:250px; border-radius:10px; object-fit:cover; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+    .price { font-size:1.2em; font-weight:bold; color:#b37c00; }
+    .button { display:inline-block; background:#ffa500; color:white; padding:.7em 1.5em; text-decoration:none; border-radius:5px; margin-top:1em; font-weight:bold; }
+    footer { text-align:center; padding:1em; background:#eee3a3; font-size:.9em; }
+    iframe { width:100%; border:none; min-height:600px; margin-top:2em; }
+    .commentbox { max-width: 800px; margin: 2em auto; padding: 1.5em; background: #fff8dd; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }    
+  </style>
