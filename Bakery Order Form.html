@@ -1,9 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3EG8DHQJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LD3EG8DHQJ');
+  </script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Honey – Honey from NAMI</title>
   <link rel="stylesheet" href="css/Bakery Order Form.css">
-</head> 
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+
+<header>
+  <h1>Order Form</h1>
+  <p><a href="/">← Back to Home</a></p>
+</header>
+
+<div class="container">
 <form
   action="https://formspree.io/f/mqabnzqn" style="background:#fff8dd; padding:1.5em; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); max-width:600px; margin:auto;"
-
   class="fs-form"
   target="_top"
   method="POST"
@@ -92,3 +114,41 @@
     <button class="fs-button" type="submit">Submit</button>
   </div>
 </form>
+</section>
+</section>
+
+<section id="contact">
+  <h2>Contact & Orders</h2>
+  <p><strong>Phone:</strong> <a href="tel:+16178217077">+1 (617) 821‑7077</a></p>
+  <p>We ship across the USA. Local pickup in Avon available.</p>
+</section>
+
+<script>
+  // Предзаполнение формы по параметру в URL
+  window.addEventListener('DOMContentLoaded', () => {
+    const hashParams = window.location.hash.split('?');
+    if (hashParams.length > 1) {
+      const params = new URLSearchParams(hashParams[1]);
+      const product = params.get('product');
+      if (product) {
+        const select = document.getElementById('product');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === product) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+        // Скролл к форме
+        const formSection = document.getElementById('order');
+        if (formSection) formSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+  
+<footer>
+  &copy; 2025 Honey from NAMI | Thank you for your order 🐝
+</footer>
+
+</body>
+</html>
