@@ -1,3 +1,0 @@
-Sitemap: https://honey-from-nami.github.io/sitemap.xml
-User-agent: *
-Disallow:
