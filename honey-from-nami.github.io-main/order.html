@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD3EG8DHQJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LD3EG8DHQJ');
+  </script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Honey – Honey from NAMI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+
+<header>
+  <h1>Order Form</h1>
+  <p><a href="/">← Back to Home</a></p>
+</header>
+
+<div class="container">
+  <form action="https://formspree.io/f/mqabnzqn" method="POST" style="background:#fff8dd; padding:1.5em; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); max-width:600px; margin:auto;">
+    
+    <label for="name">Full Name:</label><br/>
+    <input type="text" id="name" name="name" required style="width:100%; padding:.5em; margin-bottom:1em;"><br/>
+
+    <label for="email">Email:</label><br/>
+    <input type="email" id="email" name="email" required style="width:100%; padding:.5em; margin-bottom:1em;"><br/>
+
+    <label for="phone">Phone Number:</label><br/>
+    <input type="tel" id="phone" name="phone" required style="width:100%; padding:.5em; margin-bottom:1em;"><br/>
+
+    <label for="product">Select Product:</label><br/>
+    <select id="product" name="product" required style="width:100%; padding:.5em; margin-bottom:1em;">
+      <option value="">-- Please choose --</option>
+      <option value="Honey 32oz">Honey – 32 oz</option>
+      <option value="Comb Honey">Comb Honey - 20 oz</option>
+      <option value="Propolis">Propolis</option>
+      <option value="Queen Bee">Queen Bee</option>
+      <option value="10-Frame Hive">10-Frame Hive</option>
+      <option value="5-Frame Nuc">5-Frame Nuc</option>
+    </select>
+
+    <label for="quantity">Quantity:</label><br/>
+    <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" required style="width:100%; padding:.5em; margin-bottom:1em;"><br/>
+
+    <label for="notes">Additional Notes:</label><br/>
+    <textarea id="notes" name="notes" rows="4" style="width:100%; padding:.5em; margin-bottom:1em;" placeholder="Delivery instructions, pickup time, etc."></textarea><br/>
+
+    <button type="submit" style="background:#ffa500; color:white; padding:.7em 1.5em; border:none; border-radius:5px; font-weight:bold;">Submit Order</button>
+  </form>
+</section>
+</section>
+
+<section id="contact">
+  <h2>Contact & Orders</h2>
+  <p><strong>Phone:</strong> <a href="tel:+16178217077">+1 (617) 821‑7077</a></p>
+  <p>We ship across the USA. Local pickup in Avon available.</p>
+</section>
+
+<script>
+  // Предзаполнение формы по параметру в URL
+  window.addEventListener('DOMContentLoaded', () => {
+    const hashParams = window.location.hash.split('?');
+    if (hashParams.length > 1) {
+      const params = new URLSearchParams(hashParams[1]);
+      const product = params.get('product');
+      if (product) {
+        const select = document.getElementById('product');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === product) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+        // Скролл к форме
+        const formSection = document.getElementById('order');
+        if (formSection) formSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+  
+<footer>
+  &copy; 2025 Honey from NAMI | Thank you for your order 🐝
+</footer>
+
+</body>
+</html>
